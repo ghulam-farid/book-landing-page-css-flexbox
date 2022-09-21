@@ -1,0 +1,218 @@
+/* @font-face {
+    font-family: 'Istok Web';
+    src: url(../font/IstokWeb-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Istok Web';
+    src: url(../font/IstokWeb-Bold.ttf);
+} */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins-Light.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #013456;
+    --accent-color: #FAD405;
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.header{
+    font-family: 'Istok Web', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1231px;
+    margin: 0 auto;
+    padding-top: 8.1rem;
+}
+.header__title > span{
+    font: normal 700 4rem 'Istok Web', sans-serif;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+.header__title .plane-icon{
+    color: var(--accent-color);
+    font-size: 3rem;
+}
+.header .header__nav{
+    display: flex;
+    align-items: center;
+    height: 5.2rem;
+    margin-right: 1.5rem;
+}
+.header .header__nav a{
+    font-size: 3.6rem;
+    margin-left: 2.9rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.menu-icon, .close-icon{
+    display: none;
+}
+.wrapper{
+    display: flex;
+    margin-bottom: 5.1rem;
+}
+.wrapper aside{
+    width: 50%;
+    margin-top: 4.5rem;
+    position: relative;
+}
+.book{
+    height: 78.5rem;
+}
+.book-circle{
+    width: 78.5rem;
+    height: 78.5rem;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 8.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper main{
+    width: 50%;
+    max-width: 57.1rem;
+    margin-top: 9.1rem;
+}
+main > h1{
+    font: 700 4.8rem 'Poppins', sans-serif;
+    color: var(--primary-color);
+    margin: 0;
+}
+main > p{
+    font: 275 2rem 'Poppins', sans-serif;
+    color: #000;
+    margin-top: 1.4rem;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-between;
+}
+.buttons .buttons__buy-now, .buttons .buttons__read-more{
+    font: 700 3.2rem 'Poppins', sans-serif;
+    padding: 1.6rem 4.7rem;
+    border: none;
+    border-radius: 5rem;
+
+    display: flex;
+    align-items: center;
+}
+.buttons .buttons__buy-now{
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    margin-right: 4.9rem;
+}
+.buttons .buttons__read-more{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+@media screen and (max-width: 87.5em) {
+    .header{
+        padding-top: 2rem;
+        max-width: 90%;
+    }
+    .header .header__nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        z-index: 1;
+        display: block;
+        transform: translateX(-100%);
+    }
+    .header .header__nav a{
+        display: block;
+        color: var(--accent-color);
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .header .menu-icon{
+        font-size: 3rem;
+        color: var(--primary-color);
+        line-height: 4.5rem;
+        display: block;
+        cursor: pointer;
+    }
+    .header .close-icon{
+        width: calc(100% + 2rem);
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 3rem;
+        color: var(--accent-color);
+        z-index: 1;
+        transform: translateX(calc(-100% + 2rem));
+    }
+    .header .header__nav, .header .close-icon{
+        transition: transform 0.3s ease-in-out;
+    }
+    .header .header__nav--open{
+        transform: translateX(0%);
+    }
+    .header .close-icon--open{
+        transform: translateX(calc(100% - 2rem));
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper aside, .wrapper main{
+        width: 100%;
+        max-width: 90%;
+        margin-top: 2rem;
+    }
+    .book{
+        height: 30rem;
+    }
+    .book-circle img{
+        width: 15rem;
+    }
+    .book .book-circle{
+        position: initial;
+        max-width: 30rem;
+        max-height: 30rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    main h1{
+        font-size: 2.4rem;
+    }
+    main p{
+        font-size: 1.6rem;
+    }
+    .buttons .buttons__buy-now, .buttons .buttons__read-more{
+        font-size: 1.6rem;
+        padding: 1.6rem 2.5rem;
+    }
+}

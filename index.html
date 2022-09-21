@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Book Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- normalize css -->
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d1a98e8057.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom stylesheet -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <!-- custom js -->
+    <script src="./assets/js/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="header__title">
+        <span>Matt Ridley</span
+        ><i class="fa-solid fa-paper-plane plane-icon"></i>
+      </h2>
+      <nav class="header__nav">
+        <a href="#">Home</a><a href="#">About</a><a href="#">Books</a
+        ><a href="#">Blog</a><a href="#">Contact</a>
+      </nav>
+      <i class="fa-solid fa-bars menu-icon" onclick="toggleMenuNavigation('block')"></i>
+      <i class="fa-solid fa-circle-xmark close-icon" onclick="toggleMenuNavigation('none')"></i>
+    </header>
+    <div class="wrapper">
+      <aside>
+        <div class="book">
+          <div class="book-circle">
+            <img src="./assets/images/book.png" alt="book" />
+          </div>
+        </div>
+      </aside>
+      <main>
+        <h1>
+          Innovation happens when people are free to think,speculate and
+          experiment
+        </h1>
+        <p>
+          Ridley's new book, How Innovation Works, chronicles the history of
+          innovation and argues that we need to change the way we think about
+          innovation, to see it as an incremental, bottom-up, fortuitous process
+          that happens to society as a direct result of the human habit of
+          exchange.
+        </p>
+        <div class="buttons">
+          <button class="buttons__buy-now">Buy Now</button
+          ><button class="buttons__read-more">Read More</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
